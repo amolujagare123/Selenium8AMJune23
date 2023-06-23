@@ -12,7 +12,8 @@ public class SeleniumDemo3 {
 
         driver.get("http://goals.amolujagare.in");
 
-        driver.switchTo().newWindow(WindowType.WINDOW);
+       // driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.switchTo().newWindow(WindowType.TAB);
         driver.get("http://gmail.com");
 
         System.out.println(driver.getTitle());
