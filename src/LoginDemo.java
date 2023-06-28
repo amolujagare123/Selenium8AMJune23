@@ -23,7 +23,8 @@ public class LoginDemo {
         btnLogin.click();
 
 
-        driver.findElement(By.linkText("Add Customer")).click();
+       // driver.findElement(By.linkText("Add Customer")).click();
+        driver.findElement(By.partialLinkText("Add Cus")).click();
 
         driver.findElement(By.name("name")).sendKeys("Ravi");
         driver.findElement(By.name("address")).sendKeys("xyz");
