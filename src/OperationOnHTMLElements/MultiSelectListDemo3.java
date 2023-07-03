@@ -1,10 +1,14 @@
+package OperationOnHTMLElements;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class MultiSelectListDemo2 {
+import static OperationOnHTMLElements.Utilities.Util.getThreeCities;
+
+public class MultiSelectListDemo3 {
 
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
@@ -17,21 +21,14 @@ public class MultiSelectListDemo2 {
         // 2. create the object of Select class
         Select selList = new Select(jobLocation);
 
-        Thread.sleep(4000);
+        //  Thread.sleep(4000);
         // 3. select the option / item ( by visible text / value / index )
 
-        selList.selectByVisibleText("Chennai");
-        selList.selectByVisibleText("Mumbai");
+        selList.selectByVisibleText(getThreeCities().get(0));
+        selList.selectByVisibleText(getThreeCities().get(1));
+        selList.selectByVisibleText(getThreeCities().get(2));
 
-        driver.findElement(By.xpath("//*[@id=\"post_form\"]/div[2]/table/tbody/tr[1]/td[2]/table/tbody/tr/td[2]/img[1]")).click();
-
-        WebElement selectedJobLocation = driver.findElement(By.id("fld_118"));
-        Select selectedLocation = new Select(selectedJobLocation);
-        selectedLocation.selectByIndex(0);
-        selectedLocation.selectByIndex(2);
-
-        Thread.sleep(4000);
-        driver.findElement(By.xpath("//*[@id=\"post_form\"]/div[2]/table/tbody/tr[1]/td[2]/table/tbody/tr/td[2]/img[2]")).click();
+        driver.findElement(By.xpath("//*[@id='post_form']/div[2]/table/tbody/tr[1]/td[2]/table/tbody/tr/td[2]/img[1]")).click();
 
     }
 }
