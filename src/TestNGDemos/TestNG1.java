@@ -12,9 +12,9 @@ public class TestNG1 {
     @Test
     public void loginTest1()
     {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://stock.scriptinglogic.org/");
+            WebDriver driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.get("http://stock.scriptinglogic.org/");
 
         WebElement txtUsername = driver.findElement(By.id("login-username"));
         txtUsername.sendKeys("admin");
