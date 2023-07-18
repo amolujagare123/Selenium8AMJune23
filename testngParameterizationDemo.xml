@@ -1,0 +1,22 @@
+<suite name="Demo project">
+
+<parameter name="myUrl" value="http://gmail.com"/>
+<parameter name="username" value="myUser-1"/>
+<parameter name="password" value="12345"/>
+
+
+    <test name="module1">
+
+       <classes>
+           <class name="TestNGDemos.ParameterizationDemo.ClassOne"/>
+           <class name="TestNGDemos.ParameterizationDemo.ClassTwo"/>
+       </classes>
+    </test>
+
+    <test name="module2">
+        <classes>
+            <class name="TestNGDemos.ParameterizationDemo.ClassThree"/>
+        </classes>
+    </test>
+
+</suite>
