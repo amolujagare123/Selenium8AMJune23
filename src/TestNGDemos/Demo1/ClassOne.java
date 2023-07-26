@@ -1,5 +1,6 @@
 package TestNGDemos.Demo1;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class ClassOne {
@@ -18,6 +19,7 @@ public class ClassOne {
     public void classOneTest1()
     {
         System.out.println("classOneTest1");
+        Assert.assertEquals(true,false,"this test is failed");
     }
     @Test
     public void classOneTest2()

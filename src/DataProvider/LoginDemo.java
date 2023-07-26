@@ -27,9 +27,9 @@ public class LoginDemo {
     }
 
     @DataProvider
-    public Object[][] getData()
+    Object[][] getData()
     {
-        Object[][] data = new Object[4][2];
+      Object[][] data= new Object[4][2];
 
         data[0][0] = "admin";
         data[0][1] = "admin";
@@ -42,6 +42,14 @@ public class LoginDemo {
 
         data[3][0] = "invalid-3";
         data[3][1] = "invalid-3";
+
+       /* Object[][] data= {
+                {"admin","admin"},
+                {"invalid-1","invalid-1"},
+                {"invalid-2","invalid-2"},
+                {"invalid-3","invalid-3"},
+
+        };*/
 
         return data;
     }

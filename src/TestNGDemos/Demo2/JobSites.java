@@ -7,29 +7,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class JobSites {
+public class JobSites extends OpenCloseBrowser{
 
-    WebDriver driver;
-    @BeforeClass // this method will run before first test method of the class
-    public void openBrowser()
-    {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @AfterClass // this method will run after last test method of the class
-    public void closeBrowser() throws InterruptedException {
-        Thread.sleep(2000);
-        driver.close();
-    }
-
-    @Test
+      @Test
     public void naukri()
     {
         driver.get("http://naukri.com");
 
-        Assert.assertEquals(driver.getTitle(),"my naukri",
-                "this is not a correct page");
+
     }
 
     @Test
@@ -42,7 +27,10 @@ public class JobSites {
     public void shine()
     {
         driver.get("http://shine.com");
+        Assert.assertEquals(driver.getTitle(),"my naukri",
+                "this is not a correct page");
     }
+
 
     @Test
     public void timesJobs()
