@@ -49,5 +49,7 @@ public class AddCustomer {
         System.out.println("expected="+expected);
 
         Assert.assertEquals(actual,expected,"user is not added");
+
+
     }
 }
